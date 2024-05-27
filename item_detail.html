@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Detail</title>
+    <style>
+        @font-face {
+            font-family: 'Eaglese';
+            src: url('C:/Users/essrz/Downloads/Eaglese.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 60%;
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            font-family: 'Eaglese', Arial, sans-serif;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .item h2 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .item .price {
+            font-size: 1.5em;
+            color: #e91e63;
+            margin: 20px 0;
+        }
+
+        .item button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .item button:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <div class="container item">
+        <img src="file:///C:/Users/essrz/Downloads/image%20(1).png" alt="Item Image">
+        <h2>Item Name</h2>
+        <p>NORDICYX T-Shirt.</p>
+        <div class="price">$29.99</div>
+        <button>Add to Cart</button>
+    </div>
+</body>
+</html>

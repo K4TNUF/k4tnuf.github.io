@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New & Featured</title>
+    <style>
+        @font-face {
+            font-family: 'Eaglese';
+            src: url('C:/Users/essrz/Downloads/Eaglese.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            background-image: linear-gradient(to top right, #040404, #F3F3F3), url("file:///C:/Users/essrz/Downloads/image-removebg-preview (10).png");
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .header {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            font-family: 'Eaglese', Arial, sans-serif;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+            opacity: 0;
+            animation: slideDown 2s ease-out forwards;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            opacity: 0;
+            animation: slideLeft 1s 2s ease-out forwards;
+        }
+
+        .option {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .container {
+            width: 80%;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item {
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function openItem() {
+            window.location.href = "item_detail.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            New & Featured
+        </div>
+        <div class="options">
+            <a href="new_featured.html" class="option">New & Featured</a>
+            <a href="#" class="option" onclick="openPage('contact')">Contact</a>
+            <a href="#" class="option" onclick="openPage('sign_in')">Sign In</a>
+        </div>
+        <div class="container">
+            <div class="items">
+                <div class="item" onclick="openItem()">
+                    <img src="file:///C:/Users/essrz/Downloads/image%20(1).png" alt="Item Image">
+                    <h2>Item Name</h2>
+                    <p>Item description goes here. It's a brief description of the item.</p>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

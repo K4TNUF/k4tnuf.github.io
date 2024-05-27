@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background with Image</title>
+    <style>
+        @font-face {
+            font-family: 'Eaglese';
+            src: url('C:/Users/essrz/Downloads/Eaglese.otf') format('opentype');
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .background {
+            background-image: linear-gradient(to top right, #040404, #F3F3F3), url("file:///C:/Users/essrz/Downloads/image-removebg-preview (10).png");
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .content {
+            position: relative;
+            margin-bottom: 20px;
+            font-family: 'Eaglese', Arial, sans-serif;
+        }
+
+        .subtitle {
+            font-size: 0.8em;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        }
+
+        .option {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8em;
+        }
+
+        @keyframes slideInWithBlur {
+            0% {
+                transform: translateY(-100%);
+                filter: blur(10px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .content h1 {
+            animation: slideInWithBlur 2s ease-out forwards;
+        }
+
+        .options {
+            animation: slideLeft 1s 2s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="content">
+            <h1>NORDIcYX</h1>
+            <p class="subtitle">CLOTHING BRAND</p>
+            <div class="options" id="nfcs">
+                <a href="new_featured.html" class="option">New & Featured</a>
+                <a href="#" class="option" onclick="openPage('contact')">Contact</a>
+                <a href="#" class="option" onclick="openPage('sign_in')">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPage(page) {
+            let url;
+            switch (page) {
+                case 'new_featured':
+                    url = 'new_featured.html';
+                    break;
+                case 'contact':
+                    url = 'contact.html';
+                    break;
+                case 'sign_in':
+                    url = 'sign_in.html';
+                    break;
+                default:
+                    url = '#';
+            }
+            window.open(url, '_blank');
+            const content = document.querySelector('.content');
+            content.style.animation = 'slideUp 1s forwards';
+        }
+    </script>
+</body>
+</html>

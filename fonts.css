@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Eaglese';
+    src: url('fonts/Eaglese.otf') format('opentype');
+    /* Adjust the path to the font file as needed */
+}
+
+.background {
+    background-image: linear-gradient(to top right, #040404, #F3F3F3), url("file:///C:/Users/essrz/Downloads/image-removebg-preview (10).png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Hide content outside the container */
+}
+
+.content {
+    animation: slideIn 2s ease-out forwards; /* Apply the slideIn animation */
+}
+
+.title {
+    font-family: 'Eaglese', Arial, sans-serif;
+    font-size: 3em; /* Adjust the font size */
+    margin-bottom: 20px; /* Add space between the title and subtitle */
+}
+
+.subtitle {
+    font-family: 'Eaglese', Arial, sans-serif;
+    font-size: 1.5em; /* Adjust the font size */
+}
+
+/* Define the slideIn animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        filter: blur(10px); /* Apply motion blur */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        filter: blur(0); /* Remove blur */
+        opacity: 1;
+    }
+}
